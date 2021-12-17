@@ -1,4 +1,4 @@
-package com.amazon.ata.searchingsortingbigopartb.prework;
+package com.searchingsortingbigopartb.prework;
 
 import java.util.List;
 

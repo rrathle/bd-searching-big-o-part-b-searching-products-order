@@ -1,4 +1,4 @@
-package com.amazon.ata.searchingsortingbigopartb.prework;
+package com.searchingsortingbigopartb.prework;
 
 /**
  * Indicates we cannot find a requested AmazonPackage in our service

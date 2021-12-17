@@ -1,5 +1,8 @@
-package com.amazon.ata.searchingsortingbigopartb.prework;
+package searchingsortingbigopartb.prework;
 
+import com.searchingsortingbigopartb.prework.AmazonOrderService;
+import com.searchingsortingbigopartb.prework.AmazonPackage;
+import com.searchingsortingbigopartb.prework.PackageNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
