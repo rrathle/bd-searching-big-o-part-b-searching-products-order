@@ -44,7 +44,7 @@ been sorted. You should not sort them again.
 **You have completed this prework when:**
 
 * You have implemented both `findPackageLinear` and `findPackageBinary` in `AmazonOrder`.
-* The `searchingsortingbigopartb-prework` workflow is passing.
+* The `AmazonOrderServicePhase2Test` tests are passing.
 * You have committed and pushed your code.
 * You have answered the Canvas quiz with a link to your commit on code browser.
 
