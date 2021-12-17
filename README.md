@@ -1,10 +1,5 @@
 ### Searching for Products in an Order
 
-**Branch name:** searching-prework
-
-**RDE workflows:**
-* `searchingsortingbigopartb-prework`
-
 Expected time required: 30 min
 
 In this try, you will implement functionality to search an array and return an object by its `asin`.
@@ -26,7 +21,7 @@ can't be found, the method should throw a `PackageNotFoundException`.
 **You have completed phase 1 when:**
 
 * You have implemented `findPackageLinear(String asin)` in the `AmazonOrder` class.
-* The `searchingsortingbigopartb-prework-phase1` workflow is passing.
+* The `AmazonOrderServicePhase1Test` tests are passing.
 * You have committed and pushed your code.
 * You have answered the Canvas quiz with a link to your commit on code browser.
 
@@ -44,7 +39,7 @@ been sorted. You should not sort them again.
 **You have completed phase 2 when:**
 
 * You have implemented `findPackageBinary(String asin)` in the `AmazonOrder` class.
-* The `searchingsortingbigopartb-prework-phase2` workflow is passing.
+* The `AmazonOrderServicePhase2Test` tests are passing.
 
 **You have completed this prework when:**
 
@@ -54,7 +49,11 @@ been sorted. You should not sort them again.
 * You have answered the Canvas quiz with a link to your commit on code browser.
 
 HINT:
+
 [I'm not sure how to do a linear search for the ASIN](./hints/hint_01.md)
+
 [How do I track what I have left to search during binary search?](./hints/hint_02.md)
+
 [What item should I be checking in each iteration of my binary search?](./hints/hint_03.md)
+
 [How do I know when my binary search is done?](./hints/hint_04.md)
