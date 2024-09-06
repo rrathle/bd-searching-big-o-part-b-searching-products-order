@@ -1,5 +1,7 @@
 package com.searchingsortingbigopartb.prework;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -23,9 +25,15 @@ public class AmazonOrderService {
      * @param asin - The ASIN being searched for.
      * @return the Amazon Package with the target ASIN
      */
-    public AmazonPackage findPackageLinear(String asin) {
+    public AmazonPackage findPackageLinear(String asin) throws PackageNotFoundException {
         // PARTICIPANTS - Implement a linear search for a package matching the requested ASIN
-        return packages.get(0);
+        for (AmazonPackage amazonPackage : packages) {
+            if (amazonPackage.getAsin().equals(asin)) {
+                return amazonPackage;
+            }
+        }
+        throw new PackageNotFoundException("No package found with ASIN " + asin);
+
     }
 
     /**
@@ -34,8 +42,27 @@ public class AmazonOrderService {
      * @param asin - The ASIN being searched for.
      * @return the Amazon Package with the target ASIN
      */
-    public AmazonPackage findPackageBinary(String asin) {
-        // PARTICIPANTS - Implement a binary search for a package matching the requested ASIN
-        return packages.get(0);
+    public AmazonPackage findPackageBinary(String asin) throws PackageNotFoundException {
+
+        int left = 0;
+        int right = packages.size() -1 ;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            AmazonPackage midPackage = packages.get(mid);
+
+            int comparison = midPackage.getAsin().compareTo(asin);
+
+            if (comparison == 0) {
+                return midPackage; // ASIN found
+            } else if (comparison < 0) {
+                left = mid + 1; // Target ASIN is on the right half
+            } else {
+                right = mid - 1; // Target ASIN is on the left half
+            }
+        }
+
+        // If we get here, the ASIN was not found
+        throw new PackageNotFoundException("No package found with ASIN " + asin);
     }
 }
